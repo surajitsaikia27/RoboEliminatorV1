@@ -8,9 +8,7 @@ using System;
 
 public class RobotAgent : Agent
 {
-    public float moveSpeed = 5f;
-
-    [Tooltip("How fast the agent turns")]
+    public float FowardSpeed = 7f;
     public float turnSpeed = 180f;
 
     [Tooltip("Prefab of the killed bot")]
@@ -58,19 +56,7 @@ public class RobotAgent : Agent
         int forwardAction = 0;
         int turnAction = 0;
        
-        if (Input.GetKey(KeyCode.W))
-        {
-            forwardAction = 1;
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            turnAction = 1;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            turnAction = 2;
-        }
+        // To be modified
 
         // Put the actions into the array
         actionsOut.DiscreteActions.Array[0] = forwardAction;
@@ -80,7 +66,7 @@ public class RobotAgent : Agent
 
     public override void OnEpisodeBegin()
     {
-        isFull = false;
+       
         playArea.ResetArea();
     }
 
@@ -125,7 +111,7 @@ public class RobotAgent : Agent
     }
 
     private void Update()
-    {
+    {   // If the ROBOT falls from the plane give a negative Reward
         if (this.transform.localPosition.y < 0)
         {
             EndEpisode();
