@@ -40,4 +40,4 @@ behaviors:
 
 ```
 
-Note*: I am still working with this project, so results are not optimal as of now
+*Note*: I am still working in this project, so I am updating the repository frequently.
