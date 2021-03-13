@@ -5,6 +5,9 @@ In this project, I have created a 3D environment in the Unity-3D platform, where
 Follow this link to install Unity-3D and Unity Machine learning 
 https://github.com/Unity-Technologies/ml-agents
 
+#### Import the repository to the Assets folder
+After following the instruction in the above link, please import the contents of this repository inside the Assets folder
+
 #### Training script using Proximal policy optimization
 
 ```yaml
@@ -36,3 +39,5 @@ behaviors:
         threaded: true
 
 ```
+
+Note*: I am still working with this project, so results are not optimal as of now
